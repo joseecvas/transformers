@@ -12,7 +12,9 @@ public class UseTransformers1
         String[] numbers = line.split(" ");
         ArrayList<Integer> a = new ArrayList<Integer>();
         for(int i=0; i<numbers.length; i++)
-            a.add(new Integer(numbers[i]));
+        {
+            a.add(Integer.valueOf(numbers[i]));
+            }
         System.out.println("The numbers are stored in an ArrayList: "+a);
         Transformer<Integer> trans = new TenTimes();
         ArrayList<Integer> b=Transformers.applyDest(trans,a);
