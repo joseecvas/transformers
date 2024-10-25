@@ -1,7 +1,7 @@
 package org.iesvdm.transformer;
 
 import java.util.*;
-
+//Using the class TenTimes and Transformer and the interface Transformer, you can pass a List and it will multiply all its content by 10.
 public class UseTransformers1
 {
     public static void main(String[] args) throws Exception
@@ -15,9 +15,8 @@ public class UseTransformers1
             a.add(new Integer(numbers[i]));
         System.out.println("The numbers are stored in an ArrayList: "+a);
         Transformer<Integer> trans = new TenTimes();
-        ArrayList<Integer> b=Transformers.applyConst(trans,a);
+        ArrayList<Integer> b=Transformers.applyDest(trans,a);
         System.out.println("Multiplying the contents by 10 gives: "+b);
     }
-
 }
 
